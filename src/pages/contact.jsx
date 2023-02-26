@@ -7,7 +7,10 @@ import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "react-bootstrap/Button";
-import { useEffect, useState, Suspense } from "react";
+import { useEffect } from "react";
+import { Suspense } from "react";
+
+import { useState } from "react";
 import axios from "axios";
 
 const url = "https://admin.quantumleap.edu.np/api/";
@@ -29,10 +32,9 @@ export async function getServerSideProps() {
   };
 }
 
-const contact = ({ settings }) => {
+const Contact = ({ settings }) => {
   const [formData, setFormData] = useState(initialState);
   const [success, setSuccess] = useState("");
-
   const { full_name, email, phone, message } = formData;
   const onInputChange = (e) => {
     const { name, value } = e.target;
@@ -182,4 +184,4 @@ const contact = ({ settings }) => {
   );
 };
 
-export default contact;
+export default Contact;

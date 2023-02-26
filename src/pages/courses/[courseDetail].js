@@ -28,7 +28,7 @@ export async function getServerSideProps() {
   };
 }
 
-const courseDetail = ({ blogs, courses, settings }) => {
+const CourseDetail = ({ blogs, courses, settings }) => {
   const router = useRouter();
   const courseDetail = router.query.courseDetail;
   const [course, setCourse] = useState([]);
@@ -89,7 +89,7 @@ const courseDetail = ({ blogs, courses, settings }) => {
                   {courses &&
                     courses.data.slice(0, 4).map((data, key) => {
                       return (
-                        <div className="card-related">
+                        <div className="card-related" key={key}>
                           <div className="row">
                             <div className="col-5">
                               <div className="media-wrapper position-relative">
@@ -140,4 +140,4 @@ const courseDetail = ({ blogs, courses, settings }) => {
   );
 };
 
-export default courseDetail;
+export default CourseDetail;

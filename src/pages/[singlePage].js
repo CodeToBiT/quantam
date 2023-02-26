@@ -30,7 +30,7 @@ export async function getServerSideProps() {
   };
 }
 
-const serviceDetail = ({ blogs, services, pages }) => {
+const SinglePage = ({ blogs, services, pages }) => {
   const router = useRouter();
 
   const singlePage = router.query.singlePage;
@@ -90,7 +90,7 @@ const serviceDetail = ({ blogs, services, pages }) => {
                   {services &&
                     services.data.slice(0, 4).map((data, key) => {
                       return (
-                        <div className="card-related">
+                        <div className="card-related" key={key}>
                           <div className="row">
                             <div className="col-5">
                               <div className="media-wrapper position-relative">
@@ -139,4 +139,4 @@ const serviceDetail = ({ blogs, services, pages }) => {
   );
 };
 
-export default serviceDetail;
+export default SinglePage;

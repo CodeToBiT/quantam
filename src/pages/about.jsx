@@ -138,7 +138,7 @@ const about = ({ ourteams, settings, pages }) => {
               {ourteams &&
                 ourteams.data.slice(0, 4).map((data, key) => {
                   return (
-                    <div className="col-md-3">
+                    <div className="col-md-3" key={key}>
                       <TeamCard
                         clsa="col-md-3"
                         name={data.name}

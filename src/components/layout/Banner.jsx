@@ -18,7 +18,7 @@ const Banner = () => {
             <h2>20+ Years Of Experience</h2>
             <h1>Meet Our Experts & Get Better Result &Success</h1>
             <p>
-              Lorem Ipsum has been the industry's standard dummy text ever since
+              Lorem Ipsum has been the industrys standard dummy text ever since
               the 1500s, when an unknown printer took a galley of type and
               scrambled it to make a type specimen book.
             </p>

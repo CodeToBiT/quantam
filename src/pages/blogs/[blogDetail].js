@@ -87,7 +87,7 @@ const BlogDetail = ({ blogs, countries, settings }) => {
                   {blogs &&
                     blogs.data.slice(0, 4).map((data, key) => {
                       return (
-                        <div className="card-related">
+                        <div className="card-related" key={key}>
                           <div className="row">
                             <div className="col-5">
                               <div className="media-wrapper position-relative">

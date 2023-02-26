@@ -28,7 +28,7 @@ export async function getServerSideProps() {
   };
 }
 
-const serviceDetail = ({ blogs, services, settings }) => {
+const ServiceDetail = ({ blogs, services, settings }) => {
   const router = useRouter();
   const serviceDetail = router.query.serviceDetail;
   const [service, setService] = useState([]);
@@ -89,7 +89,7 @@ const serviceDetail = ({ blogs, services, settings }) => {
                   {services &&
                     services.data.slice(0, 4).map((data, key) => {
                       return (
-                        <div className="card-related">
+                        <div className="card-related" key={key}>
                           <div className="row">
                             <div className="col-5">
                               <div className="media-wrapper position-relative">
@@ -140,4 +140,4 @@ const serviceDetail = ({ blogs, services, settings }) => {
   );
 };
 
-export default serviceDetail;
+export default ServiceDetail;

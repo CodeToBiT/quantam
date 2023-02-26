@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { useRouter } from "next/router";
+import { useState } from "react";
+import { useEffect } from "react";
+import Router from "next/router";
 import Head from "next/head";
+import { useRouter } from "next/router";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -28,7 +30,7 @@ export async function getServerSideProps() {
   };
 }
 
-const countryDetail = ({ blogs, countries, settings }) => {
+const CountryDetail = ({ blogs, countries, settings }) => {
   const router = useRouter();
   const countryDetail = router.query.countryDetail;
   const [country, setCountry] = useState([]);
@@ -89,7 +91,7 @@ const countryDetail = ({ blogs, countries, settings }) => {
                   {countries &&
                     countries.data.slice(0, 4).map((data, key) => {
                       return (
-                        <div className="card-related">
+                        <div className="card-related" key={key}>
                           <div className="row">
                             <div className="col-5">
                               <div className="media-wrapper position-relative">
@@ -133,11 +135,9 @@ const countryDetail = ({ blogs, countries, settings }) => {
             </div>
           </div>
         </section>
-
-      
       </main>
     </>
   );
 };
 
-export default countryDetail;
+export default CountryDetail;
