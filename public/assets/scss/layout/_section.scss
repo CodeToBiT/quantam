@@ -1,0 +1,528 @@
+.home {
+  &-universities {
+    margin-bottom: 40px;
+    .intro {
+      h2 {
+        @include typography(1.625rem, 600, 120%);
+        color: $grey-300;
+      }
+    }
+
+    .media-wrapper {
+      background: white;
+      width: 200px;
+      height: 120px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+  &-services {
+    margin-bottom: 60px;
+    background-image: url("/images/services.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px 0;
+    .intro {
+      h3 {
+        @include typography(1.125rem, 500, 120%);
+        font-style: italic;
+        color: $grey-300;
+      }
+      h2 {
+        @include typography(3.25rem, 500, 130%);
+        color: $grey-300;
+      }
+      a {
+        border-radius: 20px;
+        @include typography(1.125rem, 500, 120%);
+      }
+    }
+    .col-md-6:nth-child(odd) {
+      margin-top: 30px;
+    }
+    .col-md-6:nth-child(even) {
+      margin-top: 10px;
+    }
+  }
+  &-countries {
+    position: relative;
+    .intro {
+      max-width: 800px;
+      margin: 0 auto 10px auto;
+      h3 {
+        @include typography(1.5rem, 600, 120%);
+        color: $grey-300;
+      }
+      h2 {
+        @include typography(2rem, 500, 120%);
+        color: $grey-300;
+      }
+      p {
+        @include typography(1.5rem, 400, 120%);
+        color: $grey-100;
+      }
+    }
+    .overlay {
+      position: absolute;
+      width: 100%;
+      height: 290px;
+      background: $secondary-100;
+      top: 40%;
+      z-index: -1;
+    }
+  }
+
+  &-about {
+    margin-top: 40px;
+    h3 {
+      @include typography(1.5rem, 300, 130%);
+      color: $secondary-100;
+    }
+    h2 {
+      @include typography(2.5rem, 500, 130%);
+      color: $grey-300;
+      padding-right: 100px;
+      margin: 10px 0;
+    }
+    p {
+      @include typography(1.5rem, 400, 150%);
+      color: $grey-100;
+      margin-bottom: 20px;
+      padding-right: 30px;
+    }
+    &-badge {
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+        0px 4px 8px rgba(0, 0, 0, 0.25);
+      padding: 10px;
+      text-align: center;
+      color: $grey-300;
+      border-radius: 8px;
+      border-bottom: 5px solid $primary;
+      width: 100%;
+      margin-bottom: 30px;
+      h4 {
+        @include typography(2.25rem, 500, 130%);
+        margin-top: 10px !important;
+      }
+      h5 {
+        @include typography(1.5rem, 500, 130%);
+      }
+    }
+    a {
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+      border-radius: 18px;
+      padding: 12px 16px;
+    }
+
+    .media-wrapper {
+      @include media_wrapper(100%, 851px, cover);
+    }
+    .experience {
+      background: $primary;
+      width: 190px;
+      border: 4px solid $white;
+      padding: 15px;
+      margin-bottom: -150px;
+      z-index: 9999;
+      h6 {
+        @include typography(5.625rem, 400, 130%);
+        color: $white;
+        text-align: center;
+      }
+      p {
+        @include typography(1.125rem, 400, 130%);
+        color: $white;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+      }
+      svg {
+        color: $white;
+      }
+    }
+  }
+
+  &-courses {
+    margin-top: 60px;
+    .intro {
+      max-width: 800px;
+      margin: 0 auto 40px auto !important;
+      h3 {
+        @include typography(1.5rem, 300, 130%);
+        color: $secondary-100;
+      }
+      h2 {
+        @include typography(2.5rem, 500, 130%);
+        color: $grey-300;
+
+        margin: 10px 0;
+      }
+      p {
+        @include typography(1.5rem, 400, 150%);
+        color: $grey-100;
+        margin-bottom: 20px;
+        padding-right: 30px;
+      }
+    }
+  }
+
+  &-blogs {
+    margin-top: 40px;
+    .intro {
+      max-width: 800px;
+      margin: 0 auto 40px auto !important;
+      h3 {
+        @include typography(1.5rem, 300, 130%);
+        color: $secondary-100;
+      }
+      h2 {
+        @include typography(2.5rem, 500, 130%);
+        color: $grey-300;
+
+        margin: 10px 0;
+      }
+    }
+  }
+}
+
+.testimonials {
+  .main {
+    min-height: 721px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    background-image: url("/images/circle.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 10px 20px;
+  }
+  margin-top: 60px;
+  .intro {
+    max-width: 800px;
+    margin: 0 auto 40px auto !important;
+    h3 {
+      @include typography(1.5rem, 300, 130%);
+      color: $secondary-100;
+    }
+    h2 {
+      @include typography(2.5rem, 500, 130%);
+      color: $grey-300;
+
+      margin: 10px 0;
+    }
+  }
+  &-slider {
+    position: relative;
+    .slick-dots {
+      bottom: -60px;
+    }
+    .slick-dots li button:before {
+      font-size: 1rem !important;
+    }
+
+    .sliderarrow {
+      position: absolute;
+      right: -64px;
+      top: 40%;
+      button {
+        border: 0;
+        background: none;
+        svg {
+          font-size: 4rem;
+          color: #fd8700;
+        }
+      }
+    }
+  }
+}
+
+.about {
+  &-info {
+    margin-top: 20px;
+    margin-bottom: 80px;
+    h3 {
+      @include typography(1.5rem, 300, 130%);
+      color: $secondary-100;
+    }
+    h2 {
+      @include typography(2.5rem, 500, 130%);
+      color: $grey-300;
+      padding-right: 100px;
+      margin: 10px 0;
+    }
+    p {
+      @include typography(1.225rem, 400, 150%);
+      color: $grey-100;
+      margin-bottom: 20px;
+      padding-right: 40px;
+    }
+    h4 {
+      @include typography(1.5rem, 500, 130%);
+      color: $grey;
+    }
+    .frame {
+      position: relative;
+      .media-wrapper {
+        margin: 20px 20px 0 auto;
+        @include media_wrapper(90%, 727px, cover);
+
+        z-index: 2;
+      }
+      @media (max-width: 1400px) {
+        .overlay {
+          display: none;
+        }
+      }
+      .overlay {
+        width: 547px;
+        height: 710px;
+        background: $primary;
+        position: absolute;
+        right: 0;
+        top: -20px;
+      }
+    }
+  }
+  &-ceo {
+    margin-top: 40px;
+    .media-wrapper {
+      @include media_wrapper(90%, 675px, cover);
+      margin: 0 auto;
+      margin: -30px 0 40px 0;
+    }
+    h2 {
+      @include typography(2.5rem, 600, 120%);
+      color: $grey;
+      margin-bottom: 20px;
+    }
+    p {
+      @include typography(1.25rem, 400, 180%);
+      color: $grey-100;
+    }
+  }
+
+  &-teams {
+    margin-top: 50px;
+    .intro {
+      max-width: 800px;
+      margin: 0 auto 40px auto !important;
+      h3 {
+        @include typography(1.5rem, 300, 130%);
+        color: $secondary-100;
+      }
+      h2 {
+        @include typography(2.5rem, 500, 130%);
+        color: $grey-300;
+
+        margin: 10px 0;
+      }
+    }
+  }
+}
+
+.services {
+  .intro {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    h3 {
+      @include typography(1.125rem, 500, 120%);
+      font-style: italic;
+      color: $grey-300;
+    }
+    h2 {
+      @include typography(3.25rem, 500, 130%);
+      color: $grey-300;
+    }
+    p {
+      @include typography(1.5rem, 400, 150%);
+      color: $grey-100;
+      margin-bottom: 20px;
+      padding-right: 30px;
+    }
+  }
+  .card-service {
+    margin-bottom: 20px;
+  }
+}
+
+.countries {
+  .intro {
+    max-width: 800px;
+    margin: 0 auto 10px auto;
+    h3 {
+      @include typography(1.5rem, 600, 120%);
+      color: $grey-300;
+    }
+    h2 {
+      @include typography(2rem, 500, 120%);
+      color: $grey-300;
+    }
+    p {
+      @include typography(1.5rem, 400, 120%);
+      color: $grey-100;
+    }
+  }
+}
+.courses {
+  .intro {
+    max-width: 800px;
+    margin: 0 auto 40px auto !important;
+    h3 {
+      @include typography(1.5rem, 300, 130%);
+      color: $secondary-100;
+    }
+    h2 {
+      @include typography(2.5rem, 500, 130%);
+      color: $grey-300;
+
+      margin: 10px 0;
+    }
+    p {
+      @include typography(1.5rem, 400, 150%);
+      color: $grey-100;
+      margin-bottom: 20px;
+      padding-right: 30px;
+    }
+  }
+}
+
+.blogs {
+  .intro {
+    max-width: 800px;
+    margin: 0 auto 40px auto !important;
+
+    h2 {
+      @include typography(2.5rem, 500, 130%);
+      color: $grey-300;
+
+      margin: 10px 0;
+    }
+    p {
+      @include typography(1.5rem, 400, 150%);
+      color: $grey-100;
+      margin-bottom: 20px;
+      padding-right: 30px;
+    }
+  }
+}
+
+.contact {
+  margin: 40px 0;
+  h3 {
+    @include typography(0.9rem, 600, 120%);
+    color: $grey;
+  }
+  h1 {
+    @include typography(2rem, 600, 120%);
+  }
+  p {
+    @include typography(1rem, 400, 130%);
+  }
+  &-info {
+    svg {
+      background: $primary;
+      color: $white;
+      border-radius: 8px;
+      font-size: 2rem;
+      width: 50px;
+      height: 50px;
+      padding: 10px;
+    }
+    h4 {
+      @include typography(1rem, 600, 120%);
+    }
+    p {
+      @include typography(1rem, 500, 130%);
+      color: $grey-100;
+    }
+  }
+
+  &-form {
+    position: relative;
+    background: $primary;
+    padding: 40px 50px;
+    border-radius: 8px;
+  }
+  .overlay {
+    &-bottom {
+      z-index: -1;
+      position: absolute;
+      left: -18px;
+      bottom: -18px;
+    }
+    &-top {
+      z-index: -1;
+      position: absolute;
+      top: 40px;
+      right: -25px;
+    }
+    &-fan {
+      z-index: -1;
+      position: absolute;
+      top: -50px;
+      right: -50px;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .overlay {
+      &-bottom,
+      &-top,
+      &-fan {
+        display: none;
+      }
+    }
+  }
+}
+
+.single {
+  &-landing {
+    .background {
+      min-height: 535px;
+      background-image: url("/images/singlebanner.png");
+      background-repeat: no-repeat;
+      background-position: right;
+    }
+    .media-wrapper {
+      @include media_wrapper(90%, 428px, cover);
+    }
+    h1 {
+      @include typography(2.5rem, 600, 120%);
+      color: $white;
+    }
+    p {
+      @include typography(1.125rem, 500, 150%);
+      color: $white;
+    }
+  }
+  &-main {
+    margin-top: 40px;
+    p {
+      @include typography(1.125rem, 400, 150%);
+      color: $grey-100;
+    }
+    .sidebar {
+      margin-top: -200px;
+      .media-wrapper {
+        @include media_wrapper(90%, 421px, cover);
+        margin-bottom: 30px;
+      }
+      a {
+        @include typography(1.5rem, 400, 120%);
+        color: $grey;
+        margin-bottom: 30px;
+      }
+    }
+  }
+  &-more {
+    .intro {
+      h2 {
+        @include typography(2.5rem, 500, 130%);
+        color: $grey-300;
+        margin: 20px 0;
+      }
+    }
+  }
+}

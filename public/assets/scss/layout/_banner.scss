@@ -1,0 +1,64 @@
+.banner {
+  position: relative;
+  margin-bottom: 60px;
+  &-background {
+    .media-wrapper {
+      @include media_wrapper(100%, 630px, cover);
+    }
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    @include typography(1.5rem, 500, 120%);
+    color: $grey-300;
+    margin-bottom: 10px;
+  }
+  h1 {
+    @include typography(3rem, 600, 120%);
+    color: $grey;
+    margin-bottom: 10px;
+  }
+  p {
+    margin-bottom: 10px;
+    @include typography(1.125rem, 500, 150%);
+    color: $grey-100;
+  }
+  .overlay {
+    &-top {
+      position: absolute;
+      top: 0;
+      right: 20%;
+    }
+    &-bottom {
+      position: absolute;
+      bottom: 10%;
+      right: 50%;
+    }
+  }
+
+  @media (min-width: 776px) {
+    &-background {
+      position: relative;
+      background-image: url("/images/bannervector.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      min-height: 932px;
+    }
+    h1 {
+      padding-right: 60px;
+    }
+    p {
+      padding-right: 100px;
+    }
+  }
+}
+@media (max-width: 1000px) {
+  .banner {
+    .overlay {
+      &-top,
+      &-bottom {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,236 @@
+.card {
+  &-service {
+    margin: 0 10px;
+    border: 1px solid $grey-300;
+    padding: 20px;
+    border-radius: 10px;
+    background: $white;
+    // margin-bottom: 20px;
+    .cup {
+      svg {
+        font-size: 3rem;
+      }
+    }
+    h5 {
+      @include typography(3.125rem, 700, 110%);
+      color: white;
+    }
+    h4 {
+      @include typography(1.5rem, 600, 120%);
+      color: $grey;
+    }
+    p {
+      @include typography(1.125rem, 500, 130%);
+      color: $grey-100;
+      padding-right: 40px;
+    }
+    a {
+      @include typography(1.125rem, 500, 130%);
+      color: $grey-300;
+    }
+    svg {
+      font-size: 1.5rem;
+    }
+
+    &:hover {
+      background: $primary;
+      h5,
+      h4,
+      p,
+      a,
+      svg {
+        color: $white !important;
+      }
+    }
+  }
+
+  &-country {
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    padding: 8px 5px 20px 5px;
+    text-align: center;
+    background: $white;
+    .media-wrapper {
+      @include media_wrapper(100%, 274px, cover);
+      img {
+        border-radius: 8px;
+      }
+    }
+    .flag {
+      margin: -50px auto 0 auto;
+      @include media_wrapper(100px, 100px, contain);
+      border: 4px solid $white;
+      border-radius: 8px;
+      img {
+        border-radius: 4px;
+      }
+    }
+
+    h5 {
+      @include typography(1.5rem, 500, 120%);
+      color: $grey-300;
+    }
+    p {
+      @include typography(1rem, 400, 150%);
+      padding: 0 30px;
+      color: $grey-100;
+    }
+    a {
+      color: $grey-300;
+      @include typography(1.125rem, 500, 130%);
+    }
+    svg {
+      font-size: 1.3rem;
+    }
+  }
+
+  &-course {
+    padding: 10px 15px;
+    background: $primary;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    color: $white;
+    .media-wrapper {
+      @include media_wrapper(100%, 162px, cover);
+      border-radius: 12px;
+    }
+
+    h4 {
+      @include typography(2rem, 500, 110%);
+    }
+    p {
+      @include typography(1.125rem, 400, 150%);
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  }
+
+  &-blog {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    padding: 10px 10px 20px 10px;
+    .media-wrapper {
+      @include media_wrapper(100%, 240px, cover);
+    }
+    .info {
+      width: 90%;
+      margin: -70px auto 0 auto;
+
+      .date {
+        min-width: 50px;
+        background: $primary;
+        padding: 10px 15px;
+        z-index: 1;
+        h2 {
+          @include typography(2.5rem, 600, 130%);
+          color: $white;
+        }
+      }
+      .name,
+      .group {
+        svg {
+          font-size: 1.5rem;
+        }
+        p {
+          font-size: 0.875rem;
+        }
+      }
+    }
+    p {
+      margin-top: 20px;
+      @include typography(1.125rem, 500, 150%);
+      color: $grey-100;
+    }
+    a {
+      border: 2px solid secondary !important;
+      &:hover {
+        color: $white !important;
+      }
+    }
+  }
+  &-testimonial {
+    @media (min-width: 1000px) {
+      .background {
+        background-image: url("/images/testiback.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: fill;
+        .row {
+          padding: 0 60px;
+        }
+      }
+      p,
+      h3 {
+        background: transparent !important;
+        color: $white;
+      }
+    }
+
+    .media-wrapper {
+      width: 100%;
+      height: 336px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+    }
+    p {
+      @include typography(1.125rem, 500, 150%);
+      background: $white;
+    }
+    h3 {
+      @include typography(1.25rem, 400, 150%);
+    }
+  }
+
+  &-team {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    .media-wrapper {
+      @include media_wrapper(100%, 198px, cover);
+    }
+    h4 {
+      @include typography(1.25rem, 500, 150%);
+      margin-top: 10px;
+    }
+    h3 {
+      @include typography(1rem, 400, 150%);
+    }
+    p {
+      @include typography(1rem, 400, 100%);
+      color: $grey-100;
+    }
+    .social {
+      svg {
+        color: $primary;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  &-related {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    padding: 10px;
+    margin-top: 20px;
+    .media-wrapper {
+      @include media_wrapper(100% !important, 120px !important, cover);
+      margin: 0 !important;
+    }
+    h4 {
+      @include typography(1rem, 400, 120%);
+    }
+    p {
+      @include typography(1rem, 500, 150%);
+      color: $grey-100;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  }
+}

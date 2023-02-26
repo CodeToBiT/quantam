@@ -1,0 +1,83 @@
+footer {
+    position: relative;
+  margin-top: 80px;
+  background-image: url("/images/footer.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  border-top: 1px solid $primary;
+  padding: 40px 0 0px 0;
+  .media-wrapper {
+    @include media_wrapper(110px, 120px, contain);
+  }
+  p {
+    margin: 20px 0;
+    @include typography(1.125rem, 500, 150%);
+    color: $grey-100;
+  }
+  @media (min-width: 780px) {
+    p {
+      padding-right: 200px;
+    }
+  }
+  .phone,
+  .email {
+    margin-bottom: 10px;
+    svg {
+      font-size: 1.5rem;
+      color: $primary;
+    }
+    p {
+      font-size: 1.125rem;
+      color: $grey;
+      margin: 0;
+    }
+  }
+
+  h3 {
+    color: $white;
+    @include typography(1.125rem, 700, 130%);
+    margin-bottom: 20px;
+  }
+  .links {
+    padding: 0;
+    .nav-link {
+      margin-bottom: 15px;
+      a {
+        color: $white;
+        @include typography(1rem, 400, 130%);
+      }
+    }
+  }
+  .social {
+    @include typography(1rem, 500, 150%);
+    color: $grey;
+    svg{
+        font-size: 1.5rem;
+        color: $grey-300;
+    }
+  }
+  .overlay{
+    position: absolute;
+    left: 0;
+    bottom: 60px;
+  }
+}
+
+@media (max-width: 1200px) {
+footer{
+    background: $primary;
+    p{
+        color: $white !important;
+
+    }
+    .phone,.email, .social{
+
+        h6,svg{
+            color: $white;
+        }
+    }
+    .overlay{
+        display: none;
+    }
+}
+}

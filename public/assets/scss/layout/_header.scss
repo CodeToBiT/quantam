@@ -1,0 +1,13 @@
+header {
+  .media-wrapper {
+    @include media_wrapper(110px, 120px, contain);
+  }
+  .nav-link {
+    @include typography(1rem, 500, 120%);
+  }
+  .apply {
+    @include typography(0.875rem, 600, 100%);
+    padding: 15px 20px;
+  }
+}
+

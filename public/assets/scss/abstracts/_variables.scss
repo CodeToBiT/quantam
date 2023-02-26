@@ -1,0 +1,41 @@
+$primary: #880055;
+$primary-100: #D14647;
+$primary-200: #D84D4E;
+
+$secondary: #FD8700; 
+$secondary-100: #FEAB4D;
+$secondary-200: #FFE8CD;
+
+
+$grey: #414141;
+$grey-100: #696969;
+$grey-200: #878787;
+$grey-300: #880056;
+
+$pink: #FFA8A8;
+
+
+$white: #FFFFFF;
+
+
+
+$black: #000000;
+$black-100: #202020;
+
+
+
+$theme-colors: (
+  "primary": $primary,
+  "primary-100": $primary-100,
+  "primary-200": $primary-200,
+  "secondary": $secondary,
+  "secondary-100": $secondary-100,
+  "grey": $grey,
+  "grey-100": $grey-100,
+  "grey-200": $grey-200,
+  "grey-300": $grey-300,
+  "black" : $black,
+  "black-100": $black-100,
+  "white": $white,
+  "pink": $pink,
+);
