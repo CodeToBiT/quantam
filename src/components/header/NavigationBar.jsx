@@ -51,7 +51,10 @@ const NavigationBar = () => {
   }
   return (
     <>
-      <Head>{favIcon}</Head>
+      <Head>
+        <title>Quantamleap</title>
+        {favIcon}
+      </Head>
       <header>
         <Navbar bg="light" expand="lg">
           <Container>
