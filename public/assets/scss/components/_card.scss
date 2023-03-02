@@ -233,4 +233,24 @@
       overflow: hidden;
     }
   }
+  &-library {
+    margin-bottom: 20px;
+    position: relative;
+    background: $primary-100;
+    border: 1px solid $primary;
+    border-radius: 4px;
+    padding: 10px 10px;
+    .media-wrapper {
+      @include media_wrapper(100%, 350px, cover);
+      img {
+        border-radius: 4px;
+      }
+    }
+    h2 {
+      margin-top: 10px;
+      @include typography(1.25rem, 500, 120%);
+      text-align: center;
+      // color: $white;
+    }
+  }
 }

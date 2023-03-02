@@ -204,7 +204,7 @@ export default function Home({
                   </div>
                 </div>
 
-                <Link href="/about" className="btn btn-secondary text-white">
+                <Link href="/about" className="btn btn-secondary text-white ">
                   Learn More
                 </Link>
               </div>
