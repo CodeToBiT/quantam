@@ -11,7 +11,7 @@ const LibraryCard = (props) => {
           <Image src={props.image} fill alt="loading" />
         </div>
 
-        <h2>Loving Kitchen 2</h2>
+        <h2>{props.name}</h2>
         <div className="d-flex justify-content-center w-100">
           <button className="btn btn-secondary py-2 px-3 text-white">
             Download

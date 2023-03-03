@@ -28,7 +28,11 @@ const Elibrary = ({ books }) => {
                 books.data.map((data, key) => {
                   return (
                     <div className="col-md-3" key={key}>
-                      <LibraryCard image={data.image} file={data.file} />
+                      <LibraryCard
+                        image={data.image}
+                        name={data.title}
+                        file={data.file}
+                      />
                     </div>
                   );
                 })}

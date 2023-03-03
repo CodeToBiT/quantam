@@ -242,8 +242,10 @@
     padding: 10px 10px;
     .media-wrapper {
       @include media_wrapper(100%, 350px, cover);
+      border-radius: 4px;
       img {
         border-radius: 4px;
+        transition: all 500ms ease;
       }
     }
     h2 {
@@ -251,6 +253,22 @@
       @include typography(1.25rem, 500, 120%);
       text-align: center;
       // color: $white;
+    }
+
+    &:hover {
+      cursor: pointer;
+      .media-wrapper {
+        background: $black;
+        border-radius: 8px;
+        img {
+          opacity: 0.8;
+          border-radius: 8px;
+          transform: scale(1.05);
+        }
+      }
+      button {
+        background: $primary !important;
+      }
     }
   }
 }

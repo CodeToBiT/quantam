@@ -17,7 +17,7 @@ const CountryCard = (props) => {
             <h5>{props.name}</h5>
             <p>{props.description}</p>
             <div className="d-flex gap-2 align-items-center justify-content-center">
-                <Link href={`/countries/${props.slug}`} > Read more</Link>
+                <Link href={`/countries/${props.slug}`} className="stretched-link" > Read more</Link>
                 <BiRightArrowAlt/>
             </div>
         </div>

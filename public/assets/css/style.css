@@ -12218,6 +12218,7 @@ a {
   width: 100%;
   height: 350px;
   overflow: hidden !important;
+  border-radius: 4px;
 }
 .card-library .media-wrapper img {
   width: 100%;
@@ -12226,6 +12227,7 @@ a {
 }
 .card-library .media-wrapper img {
   border-radius: 4px;
+  transition: all 500ms ease;
 }
 .card-library h2, .card-library .h2 {
   margin-top: 10px;
@@ -12233,6 +12235,21 @@ a {
   font-weight: 500;
   line-height: 120%;
   text-align: center;
+}
+.card-library:hover {
+  cursor: pointer;
+}
+.card-library:hover .media-wrapper {
+  background: #000000;
+  border-radius: 8px;
+}
+.card-library:hover .media-wrapper img {
+  opacity: 0.8;
+  border-radius: 8px;
+  transform: scale(1.05);
+}
+.card-library:hover button {
+  background: #880055 !important;
 }
 
 footer {
@@ -12304,11 +12321,17 @@ footer .social {
   font-size: 1rem;
   font-weight: 500;
   line-height: 150%;
+  margin-right: -5%;
   color: #414141;
 }
 footer .social svg {
   font-size: 1.5rem;
   color: #880056;
+}
+@media (min-width: 1600px) {
+  footer .social {
+    margin-right: -20%;
+  }
 }
 footer .overlay {
   position: absolute;

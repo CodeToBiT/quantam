@@ -61,11 +61,11 @@ const Footer = () => {
                 Distinctio, aliquam est! rerum inventore animi at iusto totam
                 sunt accusamus quia
               </p>
-              <div className="phone d-flex align-items-baseline gap-3">
+              <div className="phone d-flex align-items-center gap-3">
                 <FaPhoneSquareAlt />
                 <p>+977 9876543210</p>
               </div>
-              <div className="email d-flex align-items-baseline gap-3">
+              <div className="email d-flex align-items-center gap-3">
                 <FaEnvelope />
                 <p>example@example.com</p>
               </div>

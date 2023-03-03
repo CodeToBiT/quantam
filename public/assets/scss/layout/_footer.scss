@@ -50,10 +50,17 @@ footer {
   }
   .social {
     @include typography(1rem, 500, 150%);
+    margin-right: -5%;
     color: $grey;
     svg{
         font-size: 1.5rem;
         color: $grey-300;
+    }
+  }
+
+  @media (min-width: 1600px) {
+    .social{
+      margin-right: -20%;
     }
   }
   .overlay{
@@ -79,5 +86,6 @@ footer{
     .overlay{
         display: none;
     }
+    
 }
 }
