@@ -20,6 +20,8 @@ export async function getServerSideProps() {
 
   const responseServices = await fetch([url, "services"].join(""));
   const services = await responseServices.json();
+  const responseAchievements = await fetch([url, "achievements"].join(""));
+  const achievements = await responseAchievements.json();
   const responseSettings = await fetch([url, "settings"].join(""));
   const settings = await responseSettings.json();
 
@@ -28,7 +30,7 @@ export async function getServerSideProps() {
       countries,
       blogs,
       courses,
-
+      achievements,
       services,
       settings,
     },
@@ -39,7 +41,7 @@ export default function Home({
   countries,
   blogs,
   courses,
-
+  achievements,
   services,
   settings,
 }) {
@@ -146,6 +148,26 @@ export default function Home({
                   sunt accusamus quia
                 </p>
                 <div className="row">
+                  {achievements &&
+                    achievements.data.slice(0, 4).map((data, key) => {
+                      return (
+                        <div className="col-6" key={key}>
+                          <div className="home-about-badge">
+                            <Image
+                              src={data.image}
+                              width={64}
+                              height={65}
+                              alt=""
+                              sizes="(max-height: 932px)"
+                              priority="false"
+                            />
+                            <h4>{data.number}</h4>
+                            <h5>{data.title}</h5>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  {/* 
                   <div className="col-6">
                     <div className="home-about-badge">
                       <Image
@@ -187,21 +209,7 @@ export default function Home({
                       <h4>10+</h4>
                       <h5>Countries Covered</h5>
                     </div>
-                  </div>
-                  <div className="col-6">
-                    <div className="home-about-badge">
-                      <Image
-                        src="/images/badge.png"
-                        width={64}
-                        height={65}
-                        alt=""
-                        sizes="(max-height: 932px)"
-                        priority="false"
-                      />
-                      <h4>10+</h4>
-                      <h5>Countries Covered</h5>
-                    </div>
-                  </div>
+                  </div> */}
                 </div>
 
                 <Link href="/about" className="btn btn-secondary text-white ">

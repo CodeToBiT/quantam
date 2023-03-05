@@ -10,16 +10,19 @@ export async function getServerSideProps() {
   const settings = await responseSettings.json();
   const responsePages = await fetch([url, "pages"].join(""));
   const pages = await responsePages.json();
+  const responseAchievements = await fetch([url, "achievements"].join(""));
+  const achievements = await responseAchievements.json();
 
   return {
     props: {
       ourteams,
       settings,
+      achievements,
       pages,
     },
   };
 }
-const about = ({ ourteams, settings, pages }) => {
+const about = ({ ourteams, achievements, settings, pages }) => {
   return (
     <>
       <main>
@@ -35,7 +38,72 @@ const about = ({ ourteams, settings, pages }) => {
                   sunt accusamus quia
                 </p>
 
-                <div className="d-flex gap-3">
+                <div className="row">
+                  {achievements &&
+                    achievements.data.slice(0, 4).map((data, key) => {
+                      return (
+                        <div className="col-6" key={key}>
+                          <div className="home-about-badge">
+                            <Image
+                              src={data.image}
+                              width={64}
+                              height={65}
+                              alt=""
+                              sizes="(max-height: 932px)"
+                              priority="false"
+                            />
+                            <h4>{data.number}</h4>
+                            <h5>{data.title}</h5>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  {/* 
+                  <div className="col-6">
+                    <div className="home-about-badge">
+                      <Image
+                        src="/images/badge.png"
+                        width={64}
+                        height={65}
+                        alt=""
+                        sizes="(max-height: 932px)"
+                        priority="false"
+                      />
+                      <h4>10+</h4>
+                      <h5>Countries Covered</h5>
+                    </div>
+                  </div>
+                  <div className="col-6">
+                    <div className="home-about-badge">
+                      <Image
+                        src="/images/badge.png"
+                        width={64}
+                        height={65}
+                        alt=""
+                        sizes="(max-height: 932px)"
+                        priority="false"
+                      />
+                      <h4>10+</h4>
+                      <h5>Countries Covered</h5>
+                    </div>
+                  </div>
+                  <div className="col-6">
+                    <div className="home-about-badge">
+                      <Image
+                        src="/images/badge.png"
+                        width={64}
+                        height={65}
+                        alt=""
+                        sizes="(max-height: 932px)"
+                        priority="false"
+                      />
+                      <h4>10+</h4>
+                      <h5>Countries Covered</h5>
+                    </div>
+                  </div> */}
+                </div>
+
+                {/* <div className="d-flex gap-3">
                   <Image
                     src="/images/badge.png"
                     width={64}
@@ -87,7 +155,7 @@ const about = ({ ourteams, settings, pages }) => {
                       omnis inventore quod maxime officiis.
                     </p>
                   </div>
-                </div>
+                </div> */}
               </div>
               <div className="col-md-6 col-sm-12">
                 <div className="frame">
