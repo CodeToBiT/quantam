@@ -74,7 +74,7 @@ const About = ({ ourteams, achievements, settings, pages }) => {
                     {pages &&
                       pages.data.map((data, key) => {
                         if (data.id == "5") {
-                          return <Image src={data.image} fill />;
+                          return <Image src={data.image} fill key={key} />;
                         }
                       })}
                   </div>
