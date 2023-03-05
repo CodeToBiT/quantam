@@ -92,7 +92,7 @@
     margin-bottom: 20px;
     color: $white;
     .media-wrapper {
-      @include media_wrapper(100%, 162px, cover);
+      @include media_wrapper(100%, 162px, contain);
       border-radius: 12px;
     }
 

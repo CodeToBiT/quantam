@@ -24,6 +24,8 @@ export async function getServerSideProps() {
   const achievements = await responseAchievements.json();
   const responseSettings = await fetch([url, "settings"].join(""));
   const settings = await responseSettings.json();
+  const responsePages = await fetch([url, "pages"].join(""));
+  const pages = await responsePages.json();
 
   return {
     props: {
@@ -33,6 +35,7 @@ export async function getServerSideProps() {
       achievements,
       services,
       settings,
+      pages,
     },
   };
 }
@@ -44,6 +47,7 @@ export default function Home({
   achievements,
   services,
   settings,
+  pages,
 }) {
   return (
     <>
@@ -140,13 +144,22 @@ export default function Home({
           <div className="container">
             <div className="row align-items-center">
               <div className="col-md-6 col-sm-12">
-                <h3>About Quantum Services</h3>
-                <h2>Providing Right & Solid Plan To Customers.</h2>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Distinctio, aliquam est! rerum inventore animi at iusto totam
-                  sunt accusamus quia
-                </p>
+                {pages &&
+                  pages.data.map((data, key) => {
+                    if (data.id == "5") {
+                      return (
+                        <div key={key}>
+                          <h3>About Quantum Services</h3>
+                          <h2>{data.title}</h2>
+                          <div
+                            dangerouslySetInnerHTML={{
+                              __html: data.description,
+                            }}
+                          ></div>
+                        </div>
+                      );
+                    }
+                  })}
                 <div className="row">
                   {achievements &&
                     achievements.data.slice(0, 4).map((data, key) => {

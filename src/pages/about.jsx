@@ -22,7 +22,7 @@ export async function getServerSideProps() {
     },
   };
 }
-const about = ({ ourteams, achievements, settings, pages }) => {
+const About = ({ ourteams, achievements, settings, pages }) => {
   return (
     <>
       <main>
@@ -30,14 +30,22 @@ const about = ({ ourteams, achievements, settings, pages }) => {
           <div className="container">
             <div className="row align-items-center">
               <div className="col-md-6 col-sm-12">
-                <h3>About Quantum Services</h3>
-                <h2>Providing Right & Solid Plan To Customers.</h2>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Distinctio, aliquam est! rerum inventore animi at iusto totam
-                  sunt accusamus quia
-                </p>
-
+                {pages &&
+                  pages.data.map((data, key) => {
+                    if (data.id == "5") {
+                      return (
+                        <div key={key}>
+                          <h3>About Quantum Services</h3>
+                          <h2>{data.title}</h2>
+                          <div
+                            dangerouslySetInnerHTML={{
+                              __html: data.description,
+                            }}
+                          ></div>
+                        </div>
+                      );
+                    }
+                  })}
                 <div className="row">
                   {achievements &&
                     achievements.data.slice(0, 4).map((data, key) => {
@@ -58,109 +66,17 @@ const about = ({ ourteams, achievements, settings, pages }) => {
                         </div>
                       );
                     })}
-                  {/* 
-                  <div className="col-6">
-                    <div className="home-about-badge">
-                      <Image
-                        src="/images/badge.png"
-                        width={64}
-                        height={65}
-                        alt=""
-                        sizes="(max-height: 932px)"
-                        priority="false"
-                      />
-                      <h4>10+</h4>
-                      <h5>Countries Covered</h5>
-                    </div>
-                  </div>
-                  <div className="col-6">
-                    <div className="home-about-badge">
-                      <Image
-                        src="/images/badge.png"
-                        width={64}
-                        height={65}
-                        alt=""
-                        sizes="(max-height: 932px)"
-                        priority="false"
-                      />
-                      <h4>10+</h4>
-                      <h5>Countries Covered</h5>
-                    </div>
-                  </div>
-                  <div className="col-6">
-                    <div className="home-about-badge">
-                      <Image
-                        src="/images/badge.png"
-                        width={64}
-                        height={65}
-                        alt=""
-                        sizes="(max-height: 932px)"
-                        priority="false"
-                      />
-                      <h4>10+</h4>
-                      <h5>Countries Covered</h5>
-                    </div>
-                  </div> */}
                 </div>
-
-                {/* <div className="d-flex gap-3">
-                  <Image
-                    src="/images/badge.png"
-                    width={64}
-                    height={65}
-                    alt=""
-                    sizes="(max-height: 932px)"
-                    priority="false"
-                  />
-                  <div>
-                    <h4>200+ Awards WInners</h4>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. A
-                      omnis inventore quod maxime officiis.
-                    </p>
-                  </div>
-                </div>
-                <div className="d-flex gap-3">
-                  <Image
-                    src="/images/badge.png"
-                    width={64}
-                    height={65}
-                    alt=""
-                    sizes="(max-height: 932px)"
-                    priority="false"
-                  />
-
-                  <div>
-                    <h4>10+ Countries</h4>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. A
-                      omnis inventore quod maxime officiis.
-                    </p>
-                  </div>
-                </div>
-                <div className="d-flex gap-3">
-                  <Image
-                    src="/images/badge.png"
-                    width={64}
-                    height={65}
-                    alt=""
-                    sizes="(max-height: 932px)"
-                    priority="false"
-                  />
-
-                  <div>
-                    <h4>5000+ Students</h4>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. A
-                      omnis inventore quod maxime officiis.
-                    </p>
-                  </div>
-                </div> */}
               </div>
               <div className="col-md-6 col-sm-12">
                 <div className="frame">
                   <div className="media-wrapper position-relative">
-                    <Image src="/images/aboutinfo.png" fill />
+                    {pages &&
+                      pages.data.map((data, key) => {
+                        if (data.id == "5") {
+                          return <Image src={data.image} fill />;
+                        }
+                      })}
                   </div>
                   <div className="overlay"></div>
                 </div>
@@ -181,14 +97,14 @@ const about = ({ ourteams, achievements, settings, pages }) => {
                   pages.data.map((data, key) => {
                     if (data.id == "6") {
                       return (
-                        <>
+                        <div key={key}>
                           <h2>{data.title}</h2>
                           <div
                             dangerouslySetInnerHTML={{
                               __html: data.description,
                             }}
                           ></div>
-                        </>
+                        </div>
                       );
                     }
                   })}
@@ -243,4 +159,4 @@ const about = ({ ourteams, achievements, settings, pages }) => {
   );
 };
 
-export default about;
+export default About;

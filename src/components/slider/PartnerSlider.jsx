@@ -48,7 +48,7 @@ const PartnerSlider = () => {
     };
     useEffect(() => {
       fetchPartners();
-    }, [partners]);
+    }, []);
     return (
       <>
         <Slider {...partnerSettings}>

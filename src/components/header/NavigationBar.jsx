@@ -21,7 +21,7 @@ const NavigationBar = () => {
   };
   useEffect(() => {
     fetchSettings();
-  }, [settings]);
+  }, []);
   const isImage = settings && settings.data?.site_main_logo;
 
   const isIcon = settings && settings.data?.fav_icon;
@@ -65,7 +65,27 @@ const NavigationBar = () => {
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="m-auto gap-3">
                 <Nav.Link href="/">Home</Nav.Link>
-                <Nav.Link href="/about">About Us</Nav.Link>
+                <div className="nav-item show dropdown">
+                  <Link
+                    id="navbarScrollingDropdown"
+                    aria-expanded="true"
+                    role="button"
+                    className="dropdown-toggle show nav-link"
+                    tabIndex="0"
+                    href="/about"
+                  >
+                    About Us
+                  </Link>
+                  <div
+                    aria-labelledby="navbarScrollingDropdown"
+                    data-bs-popper="static"
+                    className="dropdown-menu show"
+                  >
+                    <NavDropdown.Item href="/about">About Us</NavDropdown.Item>
+                    <NavDropdown.Item href="/teams">Our Team</NavDropdown.Item>
+                    <NavDropdown.Item href="/faqs">FAQs</NavDropdown.Item>
+                  </div>
+                </div>
                 <Nav.Link href="/services">Services</Nav.Link>
                 <Nav.Link href="/courses">Courses</Nav.Link>
                 <Nav.Link href="/blogs">Blogs</Nav.Link>

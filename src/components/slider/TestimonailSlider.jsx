@@ -34,7 +34,7 @@ const TestimonailSlider = () => {
   };
   useEffect(() => {
     fetchTestimonials();
-  }, [testimonials]);
+  }, []);
   return (
     <>
       <div className="testimonials-slider">
