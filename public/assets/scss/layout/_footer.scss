@@ -1,9 +1,19 @@
 footer {
+  position: relative;
+
+  .background{
+    position: absolute;
+    height: 100%;
+    width: 70%;
+    background-image: url("/images/footer.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    bottom: 0; 
+    z-index: -1;
+  }
     position: relative;
   margin-top: 80px;
-  background-image: url("/images/footer.png");
-  background-repeat: no-repeat;
-  background-position: right;
   // background-size: cover;
   border-top: 1px solid $primary;
   padding: 40px 0 0px 0;

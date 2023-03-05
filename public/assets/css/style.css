@@ -12258,12 +12258,21 @@ a {
 
 footer {
   position: relative;
+  position: relative;
   margin-top: 80px;
-  background-image: url("/images/footer.png");
-  background-repeat: no-repeat;
-  background-position: right;
   border-top: 1px solid #901974;
   padding: 40px 0 0px 0;
+}
+footer .background {
+  position: absolute;
+  height: 100%;
+  width: 70%;
+  background-image: url("/images/footer.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  bottom: 0;
+  z-index: -1;
 }
 footer .media-wrapper {
   width: 110px;

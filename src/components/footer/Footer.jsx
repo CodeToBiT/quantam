@@ -70,59 +70,63 @@ const Footer = () => {
                 <p>example@example.com</p>
               </div>
             </div>
-            <div className="col-md-2 col-6 mb-4">
-              <h3>Quick Links</h3>
-              <ul className="links">
-                <li className="nav-link">
-                  <Link href="/">Home</Link>
-                </li>
-                <li className="nav-link">
-                  <Link href="/">About</Link>
-                </li>
-                <li className="nav-link">
-                  <Link href="/">Services</Link>
-                </li>
-                <li className="nav-link">
-                  <Link href="/">Country</Link>
-                </li>
-                <li className="nav-link">
-                  <Link href="/">Contact</Link>
-                </li>
-              </ul>
-            </div>
-            <div className="col-md-2 col-6 mb-4">
-              <h3>Countries</h3>
-              <ul className="links">
-                {countries &&
-                  countries.data?.slice(0, 5).map((data, key) => {
-                    return (
-                      <li className="nav-link" key={key}>
-                        <Link href={`/countries/${data.slug}`}>
-                          {data.name}
-                        </Link>
-                      </li>
-                    );
-                  })}
-              </ul>
-            </div>
-            <div className="col-md-2 col-6 mb-4">
-              <h3>Company</h3>
-              <ul className="links">
-              <li className="nav-link">
-                    <Link href="/faqs">FAQs</Link>{" "}
-                  </li>
-                  <li className="nav-link">
-                    <Link href="/teams">Teams</Link>{" "}
-                  </li>
-                {pages &&
-                  pages.data?.slice(0,2).map((data, key) => {
-                    return (
-                      <li className="nav-link" key={key}>
-                        <Link href={`/${data.slug}`}>{data.title}</Link>
-                      </li>
-                    );
-                  })}
-              </ul>
+            <div className="col-md-6 col-sm-12 ">
+              <div className="row">
+                <div className="col-md-4 col-6 mb-4">
+                  <h3>Quick Links</h3>
+                  <ul className="links">
+                    <li className="nav-link">
+                      <Link href="/">Home</Link>
+                    </li>
+                    <li className="nav-link">
+                      <Link href="/">About</Link>
+                    </li>
+                    <li className="nav-link">
+                      <Link href="/">Services</Link>
+                    </li>
+                    <li className="nav-link">
+                      <Link href="/">Country</Link>
+                    </li>
+                    <li className="nav-link">
+                      <Link href="/">Contact</Link>
+                    </li>
+                  </ul>
+                </div>
+                <div className="col-md-4 col-6 mb-4">
+                  <h3>Countries</h3>
+                  <ul className="links">
+                    {countries &&
+                      countries.data?.slice(0, 5).map((data, key) => {
+                        return (
+                          <li className="nav-link" key={key}>
+                            <Link href={`/countries/${data.slug}`}>
+                              {data.name}
+                            </Link>
+                          </li>
+                        );
+                      })}
+                  </ul>
+                </div>
+                <div className="col-md-4 col-6 mb-4">
+                  <h3>Company</h3>
+                  <ul className="links">
+                    <li className="nav-link">
+                      <Link href="/faqs">FAQs</Link>{" "}
+                    </li>
+                    <li className="nav-link">
+                      <Link href="/teams">Teams</Link>{" "}
+                    </li>
+                    {pages &&
+                      pages.data?.slice(0, 2).map((data, key) => {
+                        return (
+                          <li className="nav-link" key={key}>
+                            <Link href={`/${data.slug}`}>{data.title}</Link>
+                          </li>
+                        );
+                      })}
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
           <div className="d-flex justify-content-end">
@@ -143,6 +147,9 @@ const Footer = () => {
             sizes="(max-height: 125px)"
             priority="false"
           />
+        </div>
+        <div className="d-flex justify-content-end">
+          <div className="background"></div>
         </div>
       </footer>
     </>
