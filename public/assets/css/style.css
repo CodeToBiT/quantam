@@ -12262,7 +12262,6 @@ footer {
   background-image: url("/images/footer.png");
   background-repeat: no-repeat;
   background-position: right;
-  background-size: cover;
   border-top: 1px solid #901974;
   padding: 40px 0 0px 0;
 }
