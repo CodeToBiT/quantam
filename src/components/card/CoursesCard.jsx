@@ -8,7 +8,7 @@ const CoursesCard = (props) => {
         <div className="row">
           <div className="col-4">
             <div className="media-wrapper position-relative">
-              <Image src={props.image} fill />
+              <Image src={props.image} fill alt="loading" />
             </div>
           </div>
           <div className="col-8">

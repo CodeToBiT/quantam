@@ -43,7 +43,7 @@ const SinglePage = ({ blogs, services, pages }) => {
           setSingle(item);
         }
       });
-  }, [pages]);
+  }, []);
 
   return (
     <>
@@ -82,7 +82,7 @@ const SinglePage = ({ blogs, services, pages }) => {
               <div className="col-md-4">
                 <div className="sidebar mt-0">
                   <div className="media-wrapper position-relative">
-                    <Image src="/images/single.png" fill />
+                    <Image src="/images/single.png" fill alt="loading"/>
                   </div>
                   <Link href="/blogs">
                     Related Post <BiRightArrowCircle />
@@ -94,7 +94,7 @@ const SinglePage = ({ blogs, services, pages }) => {
                           <div className="row">
                             <div className="col-5">
                               <div className="media-wrapper position-relative">
-                                <Image src={data.image} fill />
+                                <Image src={data.image} fill alt="loading"/>
                               </div>
                             </div>
                             <div className="col-7">

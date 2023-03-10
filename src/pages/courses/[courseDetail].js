@@ -56,7 +56,7 @@ const CourseDetail = ({ blogs, courses, settings }) => {
               <div className="row">
                 <div className="col-md-7">
                   <div className="media-wrapper position-relative">
-                    <Image src={course && course.image} fill />
+                    <Image src={course && course.image} fill alt="loading"/>
                   </div>
                 </div>
                 <div className="col-md-5 py-3">
@@ -81,7 +81,7 @@ const CourseDetail = ({ blogs, courses, settings }) => {
               <div className="col-md-4">
                 <div className="sidebar">
                   <div className="media-wrapper position-relative">
-                    <Image src="/images/single.png" fill />
+                    <Image src="/images/single.png" fill alt="loading"/>
                   </div>
                   <Link href="/blogs">
                     Related Post <BiRightArrowCircle />
@@ -93,7 +93,7 @@ const CourseDetail = ({ blogs, courses, settings }) => {
                           <div className="row">
                             <div className="col-5">
                               <div className="media-wrapper position-relative">
-                                <Image src={data.image} fill />
+                                <Image src={data.image} fill alt="loading"/>
                               </div>
                             </div>
                             <div className="col-7">

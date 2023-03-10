@@ -56,7 +56,7 @@ const ServiceDetail = ({ blogs, services, settings }) => {
               <div className="row">
                 <div className="col-md-7">
                   <div className="media-wrapper position-relative">
-                    <Image src={service && service.image} fill />
+                    <Image src={service && service.image} fill alt="loading" />
                   </div>
                 </div>
                 <div className="col-md-5 py-3">
@@ -81,7 +81,7 @@ const ServiceDetail = ({ blogs, services, settings }) => {
               <div className="col-md-4">
                 <div className="sidebar">
                   <div className="media-wrapper position-relative">
-                    <Image src="/images/single.png" fill />
+                    <Image src="/images/single.png" fill alt="loading" />
                   </div>
                   <Link href="/blogs">
                     Related Post <BiRightArrowCircle />
@@ -93,7 +93,7 @@ const ServiceDetail = ({ blogs, services, settings }) => {
                           <div className="row">
                             <div className="col-5">
                               <div className="media-wrapper position-relative">
-                                <Image src={data.image} fill />
+                                <Image src={data.image} fill alt="loading" />
                               </div>
                             </div>
                             <div className="col-7">
@@ -133,8 +133,6 @@ const ServiceDetail = ({ blogs, services, settings }) => {
             </div>
           </div>
         </section>
-
-      
       </main>
     </>
   );

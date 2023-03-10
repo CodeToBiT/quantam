@@ -9,7 +9,7 @@ const TestimonialCard = (props) => {
           <div className="row  gap-5 align-items-center ">
             <div className="col-md-4">
               <div className="media-wrapper position-relative">
-                <Image src={props.image}fill />
+                <Image src={props.image} fill alt="loading" />
               </div>
             </div>
             <div className="col-md-7">

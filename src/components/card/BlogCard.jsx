@@ -10,7 +10,7 @@ const BlogCard = (props) => {
       <div className="card-blog">
         <div className="position-relative">
           <div className="media-wrapper position-relative">
-            <Image src={props.image} fill />
+            <Image src={props.image} alt="loading" fill />
           </div>
           <div className="info d-flex gap-4 align-items-end">
             <div className="date">

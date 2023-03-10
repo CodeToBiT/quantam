@@ -43,7 +43,6 @@ const Footer = () => {
   };
   useEffect(() => {
     fetchSettings();
-
     fetchCountries();
     fetchPages();
   }, []);
@@ -54,20 +53,16 @@ const Footer = () => {
           <div className="row align-items-center">
             <div className="col-md-6 col-sm-12 mb-4">
               <div className="media-wrapper position-relative">
-                <Image src="/images/logo.png" fill></Image>
+                <Image src="/images/logo.png" fill alt="loading" />
               </div>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Distinctio, aliquam est! rerum inventore animi at iusto totam
-                sunt accusamus quia
-              </p>
+              <p>{settings && settings.data?.site_information}</p>
               <div className="phone d-flex align-items-center gap-3">
                 <FaPhoneSquareAlt />
-                <p>+977 9876543210</p>
+                <p>{settings && settings.data?.site_contact}</p>
               </div>
               <div className="email d-flex align-items-center gap-3">
                 <FaEnvelope />
-                <p>example@example.com</p>
+                <p>{settings && settings.data?.site_email}</p>
               </div>
             </div>
             <div className="col-md-6 col-sm-12 ">

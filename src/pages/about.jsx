@@ -74,7 +74,7 @@ const About = ({ ourteams, achievements, settings, pages }) => {
                     {pages &&
                       pages.data.map((data, key) => {
                         if (data.id == "5") {
-                          return <Image src={data.image} fill key={key} />;
+                          return <Image src={data.image} fill key={key} alt="loading"/>;
                         }
                       })}
                   </div>
@@ -89,7 +89,7 @@ const About = ({ ourteams, achievements, settings, pages }) => {
             <div className="row shadow align-items-center">
               <div className="col-md-6 col-sm-12">
                 <div className="media-wrapper position-relative mx-auto">
-                  <Image src="/images/ceo.png" fill />
+                  <Image src="/images/ceo.png" fill alt="loading"/>
                 </div>
               </div>
               <div className="col-md-6 col-sm-12">

@@ -9,10 +9,10 @@ const CountryCard = (props) => {
       <div className="card-country">
         <div className="position-relative">
             <div className="media-wrapper position-relative">
-                <Image src={props.image} fill alt="Australia"/>
+                <Image src={props.image} fill alt="loading"/>
             </div>
             <div className="flag position-relative">
-                <Image src={props.flag_image} fill />
+                <Image src={props.flag_image} fill alt="loading" />
             </div>
             <h5>{props.name}</h5>
             <p>{props.description}</p>

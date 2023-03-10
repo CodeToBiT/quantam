@@ -57,7 +57,7 @@ const PartnerSlider = () => {
               <div className="d-flex justify-content-center" key={key}>
                 <div className="media-wrapper position-relative" key={key}>
                   <Link
-                    href={data.link == null || data.link == "/"  ? "javascript:void(0)" : data.link}
+                    href={data.link == null || data.link == "/"  ? "#" : data.link}
                     target={data.link == null || data.link == "/"  ? "_self" : "_blank"}
                   >
                     <Image

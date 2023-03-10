@@ -158,6 +158,7 @@ const Contact = ({ settings }) => {
                       src="/images/contactdots.png"
                       width={55}
                       height={65}
+                      alt="loading"
                     />
                   </div>
                   <div className="overlay-top">
@@ -165,6 +166,7 @@ const Contact = ({ settings }) => {
                       src="/images/contactdots.png"
                       width={55}
                       height={65}
+                      alt="loading"
                     />
                   </div>
                   <div className="overlay-fan">
@@ -172,6 +174,7 @@ const Contact = ({ settings }) => {
                       src="/images/contactfan.png"
                       width={83}
                       height={79}
+                      alt="loading"
                     />
                   </div>
                 </div>
