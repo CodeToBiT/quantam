@@ -26,7 +26,7 @@ const Banner = () => {
             <div className="banner-background d-flex align-items-center">
               <div className="media-wrapper position-relative">
                 <Image
-                  src="/images/bannerimg.png"
+                  src={settings && settings.data?.banner_image}
                   fill
                   priority="false"
                   alt="loading"

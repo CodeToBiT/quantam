@@ -4,6 +4,10 @@
   &-background {
     .media-wrapper {
       @include media_wrapper(100%, 630px, cover);
+      img {
+        border-top-right-radius: 32px;
+        border-bottom-right-radius: 32px;
+      }
     }
     margin-bottom: 20px;
   }

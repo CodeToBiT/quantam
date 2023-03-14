@@ -12448,6 +12448,10 @@ footer .overlay {
   height: 100%;
   object-fit: cover;
 }
+.banner-background .media-wrapper img {
+  border-top-right-radius: 32px;
+  border-bottom-right-radius: 32px;
+}
 .banner h2, .banner .h2 {
   font-size: 1.5rem;
   font-weight: 500;
