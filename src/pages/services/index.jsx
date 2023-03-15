@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Head from "next/head";
 import ServiceCard from "@/src/components/card/ServiceCard";
 const url = "https://admin.quantumleap.edu.np/api/";
 export async function getServerSideProps() {
@@ -19,6 +20,10 @@ export async function getServerSideProps() {
 const index = ({ services, settings }) => {
   return (
     <>
+    <Head>
+        <title>Quantum leap</title>
+       
+      </Head>
       <main>
         <section className="services">
           <div className="container">
@@ -26,8 +31,7 @@ const index = ({ services, settings }) => {
               <h3>{settings && settings.data.service_section_title}</h3>
               <h2>Services We Provide</h2>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Distinctio, aliquam
+              {settings && settings.data.service_section_description}
               </p>
             </div>
 

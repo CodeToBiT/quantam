@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import Image from "next/image";
 import TeamCard from "../components/card/TeamCard";
 import TestimonailSlider from "../components/slider/TestimonailSlider";
@@ -25,6 +26,9 @@ export async function getServerSideProps() {
 const About = ({ ourteams, achievements, settings, pages }) => {
   return (
     <>
+      <Head>
+        <title>About - Quantumleap</title>
+      </Head>
       <main>
         <section className="about-info">
           <div className="container">
@@ -74,7 +78,14 @@ const About = ({ ourteams, achievements, settings, pages }) => {
                     {pages &&
                       pages.data.map((data, key) => {
                         if (data.id == "5") {
-                          return <Image src={data.image} fill key={key} alt="loading"/>;
+                          return (
+                            <Image
+                              src={data.image}
+                              fill
+                              key={key}
+                              alt="loading"
+                            />
+                          );
                         }
                       })}
                   </div>
@@ -89,7 +100,12 @@ const About = ({ ourteams, achievements, settings, pages }) => {
             <div className="row shadow align-items-center">
               <div className="col-md-6 col-sm-12">
                 <div className="media-wrapper position-relative mx-auto">
-                  <Image src="/images/ceo.png" fill alt="loading"/>
+                  {pages &&
+                    pages.data.map((data, key) => {
+                      if (data.id == "6") {
+                        return <Image src={data.image} fill alt="loading" />;
+                      }
+                    })}
                 </div>
               </div>
               <div className="col-md-6 col-sm-12">

@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import { IoHomeOutline } from "react-icons/io5";
 import { HiOutlinePhone } from "react-icons/hi";
 import { FaRegEnvelope } from "react-icons/fa";
@@ -57,6 +58,9 @@ const Contact = ({ settings }) => {
   };
   return (
     <>
+    <Head>
+      <title>Contact - Quantumleap</title>
+    </Head>
       <main>
         <section className="contact ">
           <div className="container">

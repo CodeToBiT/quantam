@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import CoursesCard from "@/src/components/card/CoursesCard";
 import Link from "next/link";
 
@@ -20,6 +21,17 @@ export async function getServerSideProps() {
 const index = ({ courses, settings }) => {
   return (
     <>
+    <Head>
+        <title>{settings && settings.data.countries_seo_title}</title>
+        <meta
+          name="description"
+          content={settings && settings.data.countries_seo_description}
+        />
+        <meta
+          name="keywords"
+          content={settings && settings.data.countries_seo_keywords}
+        />
+      </Head>
       <main>
         <section className="courses">
           <div className="container">

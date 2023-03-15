@@ -3,7 +3,8 @@
   margin-bottom: 60px;
   &-background {
     .media-wrapper {
-      @include media_wrapper(100%, 630px, cover);
+      @include media_wrapper(100%, 630px, fill);
+
       img {
         border-top-right-radius: 32px;
         border-bottom-right-radius: 32px;

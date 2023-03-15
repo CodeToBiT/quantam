@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import LibraryCard from "../components/card/LibraryCard";
 const url = "https://admin.quantumleap.edu.np/api/";
 
@@ -16,6 +17,9 @@ export async function getServerSideProps() {
 const Elibrary = ({ books }) => {
   return (
     <>
+    <Head>
+      <title>e-Library - Quantumleap</title>
+    </Head>
       <main>
         <section className="elibrary">
           <div className="container">

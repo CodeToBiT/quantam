@@ -43,7 +43,7 @@ const Banner = () => {
                 href={settings.data?.banner_link}
                 className="btn btn-secondary text-white mt-3 px-4 py-2"
               >
-                View more
+                View More
               </Link>
             ) : (
               <></>

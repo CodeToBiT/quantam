@@ -53,7 +53,11 @@ const Footer = () => {
           <div className="row align-items-center">
             <div className="col-md-6 col-sm-12 mb-4">
               <div className="media-wrapper position-relative">
-                <Image src="/images/logo.png" fill alt="loading" />
+                <Image
+                  src={settings && settings.data?.site_main_logo}
+                  fill
+                  alt="loading"
+                />
               </div>
               <p>{settings && settings.data?.site_information}</p>
               <div className="phone d-flex align-items-center gap-3">

@@ -49,6 +49,9 @@ const CourseDetail = ({ blogs, courses, settings }) => {
 
   return (
     <>
+    <Head>
+      <title>{service && service.name} - Quantumleap</title>
+    </Head>
       <main>
         <section className="single-landing">
           <div className="container">

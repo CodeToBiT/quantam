@@ -49,6 +49,9 @@ const BlogDetail = ({ blogs, countries, settings }) => {
 
   return (
     <>
+  <Head>
+      <title>{blog && blog.title} - Quantumleap</title>
+    </Head>
       <main>
         <section className="single-landing">
           <div className="container">

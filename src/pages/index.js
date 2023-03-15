@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Head from "next/head";
 import Image from "next/image";
 import Banner from "../components/layout/Banner";
 import PartnerSlider from "../components/slider/PartnerSlider";
@@ -51,13 +52,16 @@ export default function Home({
 }) {
   return (
     <>
+      <Head>
+        <title>Quantumleap</title>
+      </Head>
       <main>
         <Banner />
 
         <section className="home-universities my-5">
           <div className="container">
             <div className="intro my-5 text-center">
-              <h2>OUR PARTNER UNIVERISTIES</h2>
+              <h2>The Universities/Colleges we connect you</h2>
             </div>
             <div className="row justify-content-center">
               <div className="col-md-10 col-sm-12">
