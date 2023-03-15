@@ -103,7 +103,7 @@ const About = ({ ourteams, achievements, settings, pages }) => {
                   {pages &&
                     pages.data.map((data, key) => {
                       if (data.id == "6") {
-                        return <Image src={data.image} fill alt="loading" />;
+                        return <Image src={data.image} fill alt="loading" key={key}/>;
                       }
                     })}
                 </div>
